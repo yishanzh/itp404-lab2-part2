@@ -1,0 +1,14 @@
+<h2>Users List</h2>
+<ul>
+  {{#each model as |user|}}
+
+  <li>
+    {{#link-to "userInfo" user.id}}
+    {{user.firstName}} {{user.lastName}}
+    <!--  last name not showing up-->
+
+    {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+{{outlet}}
